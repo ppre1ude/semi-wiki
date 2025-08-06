@@ -40,3 +40,33 @@
 .read-the-docs {
   color: #888;
 }
+
+#title > h1{
+  display: inline;
+  margin: 10px;
+}
+
+#btn{
+  margin: 10px;
+}
+
+#mainpage{
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  margin: 10px;
+  box-shadow: 5px 5px 10px grey;
+}
+
+#mainpage > h2{
+  display: inline-block;
+}
+
+#bar{
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  margin-bottom: 10px;
+  text-align: left;
+  box-shadow: 5px 5px 10px grey;
+}
