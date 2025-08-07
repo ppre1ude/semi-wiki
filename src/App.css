@@ -41,25 +41,24 @@
   color: #888;
 }
 
-#title > h1{
-  display: inline;
-  margin: 10px;
+.title{
+  display: flex;
+  justify-content: space-between;
 }
 
-#btn{
-  margin: 10px;
-}
-
-#mainpage{
+.mainpage{
   border-width: 1px;
   border-style: solid;
   border-color: black;
-  margin: 10px;
-  box-shadow: 5px 5px 10px grey;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-start;
 }
 
-#mainpage > h2{
+.mainpage .section{
   display: inline-block;
+  text-align: left;
 }
 
 #bar{
@@ -68,5 +67,31 @@
   border-color: black;
   margin-bottom: 10px;
   text-align: left;
-  box-shadow: 5px 5px 10px grey;
+  border-radius: 5px;
+  height: 2em;
+  background-color: whitesmoke;
+}
+
+#btn1{
+  background-color: orange;
+  box-shadow: 2px 2px 3px grey;
+  margin: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#btn2{
+  background-color: pink;
+  box-shadow: 2px 2px 3px grey;
+  margin: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn > #btn1:hover{
+  background-color: red;
+}
+
+.btn > #btn2:hover{
+  background-color: violet;
 }
