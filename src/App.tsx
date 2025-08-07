@@ -1,20 +1,16 @@
-import React from 'react';
-import Header from './components/Layout/Header';
-import Sidebar from './components/Layout/Sidebar';
+import { Routes, Route } from "react-router-dom";
+import { SearchPage } from "@/features/search/pages/SearchPage";
+import { DetailPage } from "@/features/detail/pages/DetailPage";
+import Mainpage from "@/features/mainpage/pages/Mainpage";
 
-
-function App() {
+const App = () => {
   return (
-    <div>
-      <Header />
-      <div style={{ display: "flex" }}>
-        <Sidebar />
-        <main style={{ padding: "20px", flex: 1 }}>
-
-        </main>
-      </div>
-    </div>
+    <Routes>
+      <Route path="/search" element={<SearchPage />} />
+      <Route path="/article/:id" element={<DetailPage />} />
+      <Route path="/" element={<Mainpage />} />
+    </Routes>
   );
-}
+};
 
 export default App;
