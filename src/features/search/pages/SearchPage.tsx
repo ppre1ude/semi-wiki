@@ -1,44 +1,60 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+import type { KeyboardEvent } from "react";
+import { useSearchParams } from "react-router-dom";
 import { SearchInput } from "@/features/search/components/SearchInput";
 import { SearchResults } from "@/features/search/components/SearchResults";
 import { fetchSearchResults } from "@/features/search/api/SearchApi";
 import * as S from "./SearchPage.styles";
 
 export const SearchPage = () => {
-  const [input, setInput] = useState("");
+  const [searchParams, setSearchParams] = useSearchParams();
+  const initialQuery = searchParams.get("q") || "";
+
+  const [input, setInput] = useState(initialQuery);
   const [results, setResults] = useState([]);
 
   useEffect(() => {
-    const search = async () => {
-      try {
-        const res = await fetchSearchResults(input);
-        setResults(res);
-      } catch (err) {
-        console.error("검색 실패:", err);
-      }
-    };
-
-    if (input) {
-      search();
+    const query = searchParams.get("q");
+    if (query) {
+      fetchSearchResults(query)
+        .then(setResults)
+        .catch((err) => console.error("검색 실패:", err));
     } else {
       setResults([]);
     }
-  }, [input]);
+  }, [searchParams]);
+
+  const handleSearch = () => {
+    const trimmed = input.trim();
+    if (trimmed) {
+      setSearchParams({ q: trimmed });
+    } else {
+      setSearchParams({});
+    }
+  };
+
+  const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      handleSearch();
+    }
+  };
 
   return (
     <S.Container>
-      <S.Title>🔍 세미위키 검색</S.Title>
+      <S.Title>세미위키 검색하기 테스트!</S.Title>
 
       <S.SearchBarWrapper>
-        <S.Select>
+        <S.Select disabled>
           <option value="all">전체</option>
-          <option value="title">제목</option>
-          <option value="content">내용</option>
         </S.Select>
 
-        <SearchInput value={input} onChange={(e) => setInput(e.target.value)} />
+        <SearchInput
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          onKeyDown={handleKeyDown}
+        />
 
-        <S.Button onClick={() => {}}>검색하기 🔍</S.Button>
+        <S.Button onClick={handleSearch}>검색하기 🔍</S.Button>
       </S.SearchBarWrapper>
 
       <S.SearchResultsContainer>
