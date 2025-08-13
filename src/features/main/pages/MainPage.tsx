@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import './MainPage.css';
 import Image from '@/assets/semicolon.png';
-=======
-import { useState } from "react";
-import "./MainPage.css";
-import Image from "@/assets/semicolon.png";
->>>>>>> 98fe3014b081c04f5e716310ddd134bf3b0c6a5c
 
 const MainPage = () => {
   const [openDropdown, setOpenDropdown] = useState(null);

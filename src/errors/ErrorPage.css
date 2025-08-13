@@ -1,0 +1,9 @@
+.title{
+    display: flex;
+    justify-content: center;
+}
+
+.detail{
+    display: flex;
+    justify-content: center;
+}
