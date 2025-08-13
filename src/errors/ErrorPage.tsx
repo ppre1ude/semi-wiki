@@ -13,9 +13,9 @@ const ErrorPage = () => {
             </div>
             <br></br>
             <br></br>
-            <button id="home"><a href="/">메인 페이지로 이동</a></button>
+            <a href="/"><button id="home">메인 페이지로 이동</button></a>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <button id="back"><a href="#" onClick={() => history.back()}>이전 페이지로 이동</a></button>
+            <a href="#" onClick={() => history.back()}><button id="back">이전 페이지로 이동</button></a>
         </div>
     )
 };
