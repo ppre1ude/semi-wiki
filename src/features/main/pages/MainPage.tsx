@@ -16,7 +16,7 @@ const MainPage = () => {
         <div className="btn">
           <button id="btn1">보고서</button>
           <button id="btn2">역사</button>
-          <button id="btn2"><a href="edit">수정</a></button>
+          <a href="edit"><button id="btn2">수정</button></a>
         </div>
       </div>
 
