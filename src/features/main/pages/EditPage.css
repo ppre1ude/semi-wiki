@@ -40,3 +40,43 @@
 .read-the-docs {
   color: #888;
 }
+
+.title{
+  display: flex;
+  justify-content: space-between;
+}
+
+.editbox{
+  height: 500px;
+  width: 100%;
+}
+
+.editbox input{
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.summary{
+  width: 100%;
+  text-align: left;
+}
+
+.summary input{
+  width: 100%;
+  text-align: left;
+}
+
+.editbtn{
+  text-align: right;
+}
+
+#editbtn{
+  width: 120px;
+  height: 40px;
+  background-color: lightblue;
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+  font-size: 1.2em;
+}
