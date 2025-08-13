@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import './MainPage.css';
 import Image from '@/assets/semicolon.png';
+=======
+import { useState } from "react";
+import "./MainPage.css";
+import Image from "@/assets/semicolon.png";
+>>>>>>> 98fe3014b081c04f5e716310ddd134bf3b0c6a5c
 
 const MainPage = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -19,7 +25,6 @@ const MainPage = () => {
           <button id="btn2"><a href="edit">수정</a></button>
         </div>
       </div>
-      
 
       <hr></hr>
 
@@ -35,49 +40,58 @@ const MainPage = () => {
 
       <div id="dropdown-menu-container">
         <div className="dropdown-item">
-          <button className="bar dropdown-toggle" onClick={() => handleDropdownToggle('overview')}>
+          <button
+            className="bar dropdown-toggle"
+            onClick={() => handleDropdownToggle("overview")}
+          >
             개요
-            <span className={`arrow ${openDropdown === 'overview' ? 'up' : 'down'}`}>
-              {openDropdown === 'overview' ? '▲' : '▼'}
+            <span
+              className={`arrow ${openDropdown === "overview" ? "up" : "down"}`}
+            >
+              {openDropdown === "overview" ? "▲" : "▼"}
             </span>
           </button>
-          {openDropdown === 'overview' && (
+          {openDropdown === "overview" && (
             <div className="dropdown-content">
-              <p>
-                Semicolon;의 개요
-              </p>
+              <p>Semicolon;의 개요</p>
             </div>
           )}
         </div>
 
         <div className="dropdown-item">
-          <button className="bar dropdown-toggle" onClick={() => handleDropdownToggle('achievements')}>
+          <button
+            className="bar dropdown-toggle"
+            onClick={() => handleDropdownToggle("achievements")}
+          >
             업적
-            <span className={`arrow ${openDropdown === 'achievements' ? 'up' : 'down'}`}>
-              {openDropdown === 'achievements' ? '▲' : '▼'}
+            <span
+              className={`arrow ${openDropdown === "achievements" ? "up" : "down"}`}
+            >
+              {openDropdown === "achievements" ? "▲" : "▼"}
             </span>
           </button>
-          {openDropdown === 'achievements' && (
+          {openDropdown === "achievements" && (
             <div className="dropdown-content">
-              <p>
-                Semicolon;의 업적
-              </p>
+              <p>Semicolon;의 업적</p>
             </div>
           )}
         </div>
 
         <div className="dropdown-item">
-          <button className="bar dropdown-toggle" onClick={() => handleDropdownToggle('controversies')}>
+          <button
+            className="bar dropdown-toggle"
+            onClick={() => handleDropdownToggle("controversies")}
+          >
             논란 및 사건사고
-            <span className={`arrow ${openDropdown === 'controversies' ? 'up' : 'down'}`}>
-              {openDropdown === 'controversies' ? '▲' : '▼'}
+            <span
+              className={`arrow ${openDropdown === "controversies" ? "up" : "down"}`}
+            >
+              {openDropdown === "controversies" ? "▲" : "▼"}
             </span>
           </button>
-          {openDropdown === 'controversies' && (
+          {openDropdown === "controversies" && (
             <div className="dropdown-content">
-              <p>
-                Semicolon;의 논란 및 사건 사고
-              </p>
+              <p>Semicolon;의 논란 및 사건 사고</p>
             </div>
           )}
         </div>
@@ -85,6 +99,5 @@ const MainPage = () => {
     </div>
   );
 };
-
 
 export default MainPage;

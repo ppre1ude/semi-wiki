@@ -1,8 +1,9 @@
 import { Routes, Route } from "react-router-dom";
+
 import { SearchPage } from "@/features/search/pages/SearchPage";
 import { DetailPage } from "@/features/detail/pages/DetailPage";
 import MainPage from "@/features/main/pages/MainPage";
-import EditPage from "@/features/main/pages/EditPage";
+import EditPage from "@/features/edit/pages/EditPage";
 
 const App = () => {
   return (
