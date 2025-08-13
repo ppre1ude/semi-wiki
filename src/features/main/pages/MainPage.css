@@ -154,3 +154,12 @@
     opacity: 1;
   }
 }
+
+.img{
+  width: 200px;
+}
+
+img{
+  width: 100%;
+  max-width: 500px;
+}

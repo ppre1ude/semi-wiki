@@ -1,6 +1,6 @@
-import { useState } from "react";
-import "./MainPage.css";
-import Image from "@/assets/semicolon.png";
+import { useState } from 'react';
+import './MainPage.css';
+import Image from '@/assets/semicolon.jpg';
 
 const MainPage = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -16,7 +16,7 @@ const MainPage = () => {
         <div className="btn">
           <button id="btn1">보고서</button>
           <button id="btn2">역사</button>
-          <button id="btn2">수정</button>
+          <a href="edit"><button id="btn2">수정</button></a>
         </div>
       </div>
 
