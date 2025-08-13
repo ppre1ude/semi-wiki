@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './MainPage.css';
-import Image from '@/assets/semicolon.png';
+import Image from '@/assets/semicolon.jpg';
 
 const MainPage = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
