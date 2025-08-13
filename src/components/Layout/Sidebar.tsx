@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 const SIDEBAR_WIDTH = 250;
 
 const Sidebar = () => {
@@ -15,23 +17,24 @@ const Sidebar = () => {
         color: "black",
         display: "flex",
         flexDirection: "column",
-        // borderRight: "2px solid #e6b99d",  // Ïó¨Í∏∞ ÏÑ† Ï†úÍ±∞
+        // borderRight: "2px solid #e6b99d",  // ?ó¨Í∏? ?Ñ† ?†úÍ±?
       }}
     >
-      {/* Semiwiki Î°úÍ≥† */}
-      <div
-        style={{
-          fontWeight: "bold",
-          fontSize: "24px",
-          marginBottom: "20px",
-          paddingBottom: "10px",
-          borderBottom: "2px solid #e6b99d",
-        }}
-      >
-        Semiwiki
-      </div>
+      <div style={{ width: "100%", display: "flex", justifyContent: "center", marginBottom: "20px", borderBottom: "2px solid #e6b99d" }}>
+  <Link to="/">
+    <img
+      src="./Semi.png"
+      alt="Semiwiki"
+      style={{
+        width: "120px",
+        height: "auto"
+      }}
+    />
+  </Link>
+</div>
 
-      {/* Î©îÎâ¥ Ïπ∏ */}
+
+      {/* Î©îÎâ¥ Ïπ? */}
       <div
         style={{
           marginBottom: "40px",
@@ -83,7 +86,7 @@ const Sidebar = () => {
         </ul>
       </div>
 
-      {/* ÎèÑÍµ¨ Ïπ∏ */}
+      {/* ?èÑÍµ? Ïπ? */}
       <div>
         <h3>Tools</h3>
         <ul style={{ listStyle: "none", paddingLeft: 0, margin: 0 }}>
