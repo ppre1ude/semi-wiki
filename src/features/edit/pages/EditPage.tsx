@@ -10,7 +10,7 @@ const EditPage = () => {
             <hr></hr>
 
             <div className="editbox">
-                <input type="text"></input>
+                <input type="text" placeholder="수정 내용을 입력하세요."></input>
             </div>
 
             <br></br>
@@ -18,7 +18,7 @@ const EditPage = () => {
 
             <div className="summary">
                 요약
-                <input type="text"></input>
+                <input type="text" placeholder="요약을 입력하세요."></input>
             </div>
 
             <br></br>
